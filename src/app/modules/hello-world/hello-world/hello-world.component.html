@@ -5,6 +5,14 @@
   <label>Provider: </label>{{provider}}<br>
   <label>Address: </label>{{address}}
 </p>
+
+<form [formGroup]="messageForm" (ngSubmit)="clickSend()">
+  <mat-form-field>
+    <input matInput formControlName="message" placeholder="Message">
+  </mat-form-field>
+  <button style="margin-left: 6px;" mat-raised-button [disabled]="messageForm.invalid" type="submit">Send</button>
+</form>
+
 <button mat-raised-button (click)="clickHelloWorld()">Hello world</button>
 <button mat-raised-button (click)="clickSendHello()">Send hello</button>
 <button mat-raised-button (click)="clickFetchHello()">Fetch hello</button>
