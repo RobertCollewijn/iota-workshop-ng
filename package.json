@@ -22,6 +22,7 @@
     "@angular/platform-browser": "~7.1.0",
     "@angular/platform-browser-dynamic": "~7.1.0",
     "@angular/router": "~7.1.0",
+    "@iota/converter": "^1.0.0-beta.8",
     "@iota/core": "^1.0.0-beta.8",
     "@iota/mam": "^0.5.0",
     "core-js": "^2.5.4",
