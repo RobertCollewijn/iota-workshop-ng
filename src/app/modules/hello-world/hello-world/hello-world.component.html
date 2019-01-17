@@ -1,0 +1,26 @@
+<h2>
+ Hello world
+</h2>
+<p>
+  <label>Provider: </label>{{provider}}<br>
+  <label>Address: </label>{{address}}
+</p>
+<button mat-raised-button (click)="clickHelloWorld()">Hello world</button>
+<button mat-raised-button (click)="clickSendHello()">Send hello</button>
+<button mat-raised-button (click)="clickFetchHello()">Fetch hello</button>
+
+<mat-card *ngFor="let response of responses; let i=index">
+  <mat-card-title>{{i}}</mat-card-title>
+  <mat-card-content>
+    <p *ngFor="let prop of response| keyvalue">
+      <strong>{{prop.key}}</strong>:
+      <span *ngIf="prop.key.toLowerCase().includes('time')">{{prop.value|date:'dd-MM-yyyy HH:mm:SS'}}</span>
+      <span *ngIf="!prop.key.toLowerCase().includes('time')">{{prop.value}}</span>
+    </p>
+  </mat-card-content>
+</mat-card>
+<p style="color:red">
+  {{err}}
+</p>
+
+
