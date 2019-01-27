@@ -1,0 +1,15 @@
+<mat-sidenav-container fxFlexFill class="sidenav-container">
+  <mat-sidenav fxLayout="column" #sidenav mode='side' opened="true">
+    <mat-nav-list fxLayout="column">
+      <a mat-list-item (click)="clickLink('/home')">Home</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item (click)="clickLink('hello-world')">Hello World</a>
+      <mat-divider></mat-divider>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content fxFlex="1 1 auto" style="padding: 8px;">
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
