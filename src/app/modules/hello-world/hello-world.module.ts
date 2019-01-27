@@ -4,6 +4,7 @@ import {HelloWorldComponent} from './hello-world/hello-world.component';
 import {RouterModule, Routes} from "@angular/router";
 import {CoreModule} from "@angular/flex-layout";
 import {AppMaterialModule} from "../../core/material/app-material.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
     CommonModule,
     CoreModule,
     AppMaterialModule,
+    ReactiveFormsModule, FormsModule,
     RouterModule.forChild(routes)
   ]
 })
