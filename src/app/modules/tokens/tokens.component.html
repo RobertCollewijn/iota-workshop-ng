@@ -1,0 +1,21 @@
+<button mat-raised-button (click)="clickCreateAddress()">Create address</button><br>
+{{address}}<br>
+<button mat-raised-button (click)="clickCheckBalance()">Check balances</button><br>
+{{balances}}<br>
+<button mat-raised-button (click)="clickGetAccountData()">Get Accountdata</button><br>
+
+<table >
+  <thead>
+  <td>#<td>Address</td><td>Balance</td>
+  </thead>
+  <tr *ngFor="let address of addresses; let i=index;">
+    <td>{{i}}</td><td>{{address.address}}</td><td>{{address.balance}}</td>
+  </tr>
+</table>
+
+{{inputs|json}}<br>
+{{balance}}<br>
+
+
+<button mat-raised-button (click)="clickTransfer()">Transfer</button><br>
+
