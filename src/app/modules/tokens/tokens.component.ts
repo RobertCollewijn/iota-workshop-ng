@@ -97,7 +97,7 @@ export class TokensComponent implements OnInit {
     const transfers = [
       {
         value: 100,
-        address: receivingAddress,
+        address: 'QZUQLKWVJXNITAKIJRMC9OLRAVMZCWAWOK99WXVOUHULIXHWUIMI9BYMJZZOXATKFUJFKUJT99NPU9ZY9',
         tag: 'MYMAGIC1'
       }
 

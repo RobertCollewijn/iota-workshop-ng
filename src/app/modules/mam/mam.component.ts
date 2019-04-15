@@ -20,8 +20,8 @@ export class MamComponent implements OnInit {
 
 
   clickPublish() {
-    this.publish('Super public message');
-    this.publish('Super public message2');
+    this.publish('Super public message7');
+    this.publish('Super public message8');
   }
 
   clickReadMam() {
@@ -45,13 +45,19 @@ export class MamComponent implements OnInit {
 
 // Display coordinate data on our screen when we receive it
   async showData(raw) {
+    console.log(`showData ${raw}`)
     const data = Converter.trytesToAscii(raw);
     console.log(data);
   }
 
   async readMam() {
     // const root = 'OXPOYTSZEOGUOITHYBWDYHXNCLRVQHGXMFMEIJLNHNDEWJYWQHGRPTQJ99MUWRDAOVPBIGSW9MSQLMOOA';
-    const     root ='UHC9NVXVFOPJJMWYJGIDOHYIK9IVIEZXGLKMOQHAZCBQOBKLGXNJW9AQFGK9OIRXFOXQJARNQ9LNQQSQE';
+    let     root ='UHC9NVXVFOPJJMWYJGIDOHYIK9IVIEZXGLKMOQHAZCBQOBKLGXNJW9AQFGK9OIRXFOXQJARNQ9LNQQSQE';
+    root ='KWNCCWNHSOZDUYWAZYHFRKUCBNRLXZHVQAIHYYKUWMALPVNYLBWOSHJYOMEAWHQKPAJQQERENGTJQBFPM'
+    root = 'KYRGXGVUCFLDBJDRXFKEMRMUYIHOCNSOUVGDYZRZKOALGUPECVAVZHJHUUJUTCHTPNLXOMHYKC9DHVYW9'
+    Mam.fetch(root)
+      .then(r=> console.log(r))
+      .catch(e=> console.error(e))
     await Mam.fetch(root, 'public', null, this.showData);
   }
 
